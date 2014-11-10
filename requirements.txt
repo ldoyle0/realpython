@@ -1,4 +1,4 @@
-BzrTools==2.6.0
+BzrTools<=2.6.0
 Django==1.6.5
 Flask==0.10.1
 Jinja2==2.7.3
@@ -8,7 +8,7 @@ SecretStorage==2.0.0
 Werkzeug==0.9.6
 argparse==1.2.1
 astroid==1.0.1
-bzr==2.7.0dev1
+bzr<=2.7.0dev1
 chardet==2.0.1
 colorama==0.2.5
 configobj==4.7.2
