@@ -26,7 +26,6 @@ pycrypto==2.6.1
 pygpgme==0.3
 pylint==1.1.0
 pyparsing==2.0.1
-python-apt==0.9.3.5
 python-dateutil==1.5
 pytz==2012c
 requests==2.2.1
