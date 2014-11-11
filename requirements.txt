@@ -6,7 +6,6 @@ SecretStorage==2.0.0
 Werkzeug==0.9.6
 argparse==1.2.1
 astroid==1.0.1
-chardet==2.0.1
 colorama==0.2.5
 configobj==4.7.2
 decorator==3.4.0
