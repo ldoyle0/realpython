@@ -1,6 +1,6 @@
-import sqlite3
+import psycopg2
 
-with sqlite3.connect("blog.db") as connection:
+with psycopg2.connect("blog.db") as connection:
     
     c = connection.cursor()
     

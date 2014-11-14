@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request, session, flash, redirect, url_for, g
 from functools import wraps
 
-import sqlite3
+import psycopg2
 
 #configuration
 DATABASE = 'blog.db'
@@ -16,7 +16,7 @@ app.config.from_object(__name__)
 
 #function used for connecting to the database
 def connect_db():
-    return sqlite3.connect(app.config['DATABASE'])
+    return psycopg2.connect(app.config['DATABASE'])
 
 #login required
 def login_required(test):
