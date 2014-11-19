@@ -41,6 +41,16 @@ def login():
             return redirect(url_for('main'))
     return render_template('login.html', error=error)
 
+#main page
+@app.route("/main")
+@login_required
+def main():
+    g.db = connect_db()
+    cur = g.db.execute('select * from posts')
+    posts = [dict(title=row[0], post=row[1]) for row in cur.fetchall()]
+    g.db.close()
+    return render_template('main.html', posts=posts)
+
 #logout page
 @app.route('/logout')
 def logout():
@@ -48,12 +58,6 @@ def logout():
     session.pop('logged_in', None)
     flash('You were logged out')
     return redirect(url_for('login'))
-
-#main page
-@app.route("/main")
-@login_required
-def main():
-    return render_template('main.html')
     
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)
